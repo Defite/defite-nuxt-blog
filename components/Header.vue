@@ -1,6 +1,14 @@
 <template>
   <nav
-    class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10 header"
+    class="
+      flex
+      justify-between
+      items-center
+      border-b-2 border-gray-100
+      py-6
+      md:justify-start md:space-x-10
+      header
+    "
     aria-label="Global"
   >
     <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
@@ -23,10 +31,11 @@
               items-center
               justify-center
               text-gray-400
-              hover:text-gray-500
-              hover:bg-gray-100
+              hover:text-gray-500 hover:bg-gray-100
               focus:outline-none
-              focus:ring-2 focus:ring-inset focus:ring-indigo-500
+              focus:ring-2
+              focus:ring-inset
+              focus:ring-indigo-500
             "
             aria-expanded="false"
           >

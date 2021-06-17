@@ -5,7 +5,9 @@
       :key="post.slug"
       class="bg-white dark:bg-gray-800 mb-8 rounded-md flex-1"
     >
-      <div class="text-base text-gray-500 mb-2">{{ formatDate(post.createdAt) }}</div>
+      <div class="text-base text-gray-500 mb-2">
+        {{ formatDate(post.createdAt) }}
+      </div>
       <h2 class="font-bold text-2xl mb-3">
         <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
       </h2>
@@ -18,8 +20,8 @@
 import Vue from 'vue'
 
 interface IDateOptions {
-  year: 'numeric' | '2-digit',
-  month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long',
+  year: 'numeric' | '2-digit'
+  month: 'numeric' | '2-digit' | 'narrow' | 'short' | 'long'
   day: 'numeric' | '2-digit'
 }
 
@@ -27,10 +29,14 @@ export default Vue.extend({
   props: ['posts'],
   methods: {
     formatDate(date: string) {
-      const options: IDateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+      const options: IDateOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 })
 </script>
 

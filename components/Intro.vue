@@ -9,23 +9,11 @@
         bg-white
         sm:pb-16
         md:pb-20
-        lg:max-w-2xl
-        lg:w-full
-        lg:pb-28
+        lg:max-w-2xl lg:w-full lg:pb-28
         xl:pb-32
       "
     >
-      <main
-        class="
-          mt-10
-          mx-auto
-          max-w-7xl
-          sm:mt-12
-          md:mt-16
-          lg:mt-20
-          xl:mt-28
-        "
-      >
+      <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
         <div class="sm:text-center lg:text-left">
           <h1
             class="
@@ -44,12 +32,8 @@
             class="
               mt-3
               text-base text-gray-500
-              sm:mt-5
-              sm:text-lg
-              sm:max-w-xl
-              sm:mx-auto
-              md:mt-5
-              md:text-xl
+              sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto
+              md:mt-5 md:text-xl
               lg:mx-0
             "
           >
@@ -75,9 +59,7 @@
                   text-white
                   bg-indigo-600
                   hover:bg-indigo-700
-                  md:py-4
-                  md:text-lg
-                  md:px-10
+                  md:py-4 md:text-lg md:px-10
                 "
               >
                 Get started
@@ -100,9 +82,7 @@
                   text-indigo-700
                   bg-indigo-100
                   hover:bg-indigo-200
-                  md:py-4
-                  md:text-lg
-                  md:px-10
+                  md:py-4 md:text-lg md:px-10
                 "
               >
                 Live demo
