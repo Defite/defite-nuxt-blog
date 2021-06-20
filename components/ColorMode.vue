@@ -7,10 +7,7 @@
       v-if="$colorMode.preference === 'light'"
       @click="$colorMode.preference = 'dark'"
     />
-    <IconLight
-      v-if="$colorMode.preference === 'dark'"
-      @click="$colorMode.preference = 'light'"
-    />
+    <IconLight v-else @click="$colorMode.preference = 'light'" />
   </button>
 </template>
 
