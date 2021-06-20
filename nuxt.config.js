@@ -30,6 +30,10 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode',
+    // svg loader
+    '@nuxtjs/svg',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,8 +52,19 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-nord.css'
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Color Mode settings
+  colorMode: {
+    classSuffix: ''
+  },
 }

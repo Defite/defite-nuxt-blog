@@ -1,5 +1,5 @@
 <template>
-  <article class="article prose text-left bg-white dark:bg-gray-800 my-20">
+  <article class="article prose prose-lg dark:prose-dark text-left my-20">
     <h1 class="article-title">{{ post.title }}</h1>
     <nuxt-content :document="post" />
   </article>
@@ -7,11 +7,25 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import CopyCode from '~/components/CopyCode.vue'
 export default Vue.extend({
   async asyncData({ $content, params }) {
     const post = await $content('blog', params.slug).fetch()
 
     return { post }
+  },
+  mounted() {
+    setTimeout(() => {
+      const blocks = Array.from(
+        document.getElementsByClassName('nuxt-content-highlight')
+      )
+
+      for (const block of blocks) {
+        const CopyButton = Vue.extend(CopyCode)
+        const component = new CopyButton().$mount()
+        block.appendChild(component.$el)
+      }
+    }, 100)
   },
 })
 </script>

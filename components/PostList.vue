@@ -1,17 +1,19 @@
 <template>
   <section class="post-list w-full text-left my-20 flex flex-row">
-    <div
-      v-for="post in posts"
-      :key="post.slug"
-      class="bg-white dark:bg-gray-800 mb-8 rounded-md flex-1"
-    >
-      <div class="text-base text-gray-500 mb-2">
+    <div v-for="post in posts" :key="post.slug" class="mb-8 flex-1">
+      <div class="text-base text-gray-500 dark:text-gray-400 mb-2">
         {{ formatDate(post.createdAt) }}
       </div>
       <h2 class="font-bold text-2xl mb-3">
-        <NuxtLink :to="post.path">{{ post.title }}</NuxtLink>
+        <NuxtLink
+          class="dark:text-gray-300 dark:hover:text-white"
+          :to="post.path"
+          >{{ post.title }}</NuxtLink
+        >
       </h2>
-      <p class="text-lg text-gray-500">{{ post.description }}</p>
+      <p class="text-lg text-gray-500 dark:text-gray-400">
+        {{ post.description }}
+      </p>
     </div>
   </section>
 </template>

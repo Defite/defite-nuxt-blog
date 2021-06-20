@@ -14,6 +14,11 @@ export default Vue.extend({
   components: {
     Header,
   },
+  head: {
+    bodyAttrs: {
+      class: 'bg-gray-50 dark:bg-gray-800',
+    },
+  },
 })
 </script>
 
@@ -35,5 +40,9 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.nuxt-content-highlight {
+  position: relative;
 }
 </style>
