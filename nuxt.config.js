@@ -55,9 +55,9 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-nord.css'
-      }
-    }
+        theme: 'prism-themes/themes/prism-nord.css',
+      },
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -65,6 +65,6 @@ export default {
 
   // Color Mode settings
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
   },
 }
