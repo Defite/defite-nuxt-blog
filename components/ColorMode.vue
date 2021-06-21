@@ -4,7 +4,7 @@
     class="ml-auto dark:text-gray-300 dark:hover:text-white"
   >
     <IconLight
-      v-if="$colorMode.preference === 'dark'"
+      v-if="$colorMode.value === 'dark'"
       @click="$colorMode.preference = 'light'"
     />
     <IconDark v-else @click="$colorMode.preference = 'dark'" />
