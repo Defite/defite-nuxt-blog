@@ -3,8 +3,7 @@
     role="Toggle dark/light mode"
     class="
       ml-auto
-      dark:text-gray-300
-      dark:hover:text-white
+      dark:text-gray-300 dark:hover:text-white
       hidden
       md:inline-block
     "

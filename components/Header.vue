@@ -20,10 +20,11 @@
                 items-center
                 justify-center
                 text-gray-400
-                hover:text-gray-500
-                hover:bg-gray-100
+                hover:text-gray-500 hover:bg-gray-100
                 focus:outline-none
-                focus:ring-2 focus:ring-inset focus:ring-indigo-500
+                focus:ring-2
+                focus:ring-inset
+                focus:ring-indigo-500
               "
               @click="showMenu = true"
               aria-expanded="false"
@@ -117,10 +118,11 @@
                       items-center
                       justify-center
                       text-gray-400
-                      hover:text-gray-500
-                      hover:bg-gray-100
+                      hover:text-gray-500 hover:bg-gray-100
                       focus:outline-none
-                      focus:ring-2 focus:ring-inset focus:ring-indigo-500
+                      focus:ring-2
+                      focus:ring-inset
+                      focus:ring-indigo-500
                     "
                     @click="showMenu = false"
                   >
