@@ -77,6 +77,6 @@ export default {
 
         document.readingTime = text
       }
-    }
-  }
+    },
+  },
 }
