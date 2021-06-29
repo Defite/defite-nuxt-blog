@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <div class="grid grid-cols-main">
-      <Header />
-      <Nuxt />
-    </div>
+  <div class="grid grid-cols-main">
+    <Header />
+    <Nuxt />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
-  <section class="post-list w-full text-left my-20 flex flex-row">
-    <div v-for="post in posts" :key="post.slug" class="mb-8 flex-1">
+  <section class="post-list w-full text-left my-20 flex flex-wrap flex-row">
+    <div v-for="post in posts" :key="post.slug" class="mb-10 post-card">
       <div class="text-base text-gray-500 dark:text-gray-400 mb-2">
         {{ formatDate(post.createdAt) }}
       </div>
@@ -45,5 +45,10 @@ export default Vue.extend({
 <style scoped>
 .post-list {
   grid-column: wide-start/wide-end;
+}
+
+.post-card {
+  flex: 0 50%;
+  padding-right: 20px;
 }
 </style>

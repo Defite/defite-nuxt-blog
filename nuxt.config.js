@@ -34,6 +34,8 @@ export default {
     '@nuxtjs/color-mode',
     // svg loader
     '@nuxtjs/svg',
+    // https://image.nuxtjs.org/
+    '@nuxt/image',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -67,4 +69,14 @@ export default {
   colorMode: {
     classSuffix: '',
   },
+
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { text } = require('reading-time')(document.text)
+
+        document.readingTime = text
+      }
+    }
+  }
 }

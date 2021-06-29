@@ -1,6 +1,9 @@
 <template>
   <article class="article prose prose-lg dark:prose-dark text-left my-20">
-    <h1 class="article-title">{{ post.title }}</h1>
+    <header class="mb-20">
+      <h1 class="article-title">{{ post.title }}</h1>
+      <PostMeta :date="post.createdAt" :readingTime="post.readingTime" />
+    </header>
     <nuxt-content :document="post" />
   </article>
 </template>
@@ -8,6 +11,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import CopyCode from '~/components/CopyCode.vue'
+import PostMeta from '~/components/PostMeta.vue'
+
 export default Vue.extend({
   async asyncData({ $content, params }) {
     const post = await $content('blog', params.slug).fetch()
@@ -27,11 +32,16 @@ export default Vue.extend({
       }
     }, 100)
   },
+  components: {
+    PostMeta,
+  },
 })
 </script>
 
 <style scoped>
 .article {
-  grid-column: wide-start/wide-end;
+  grid-column: main-start/main-end;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
