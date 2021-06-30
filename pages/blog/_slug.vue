@@ -1,5 +1,16 @@
 <template>
-  <article class="article prose prose-lg dark:prose-dark text-left my-20">
+  <article
+    class="
+      article
+      prose
+      sm:prose-sm
+      lg:prose-lg
+      xl:prose-xl
+      dark:prose-dark
+      text-left
+      my-20
+    "
+  >
     <header class="mb-20">
       <h1 class="article-title">{{ post.title }}</h1>
       <PostMeta :date="post.createdAt" :readingTime="post.readingTime" />
@@ -40,8 +51,19 @@ export default Vue.extend({
 
 <style scoped>
 .article {
-  grid-column: main-start/main-end;
-  margin-left: auto;
-  margin-right: auto;
+  grid-column: wide-start/wide-end;
+}
+
+@screen sm {
+  .article {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@screen lg {
+  .article {
+    grid-column: main-start/main-end;
+  }
 }
 </style>
