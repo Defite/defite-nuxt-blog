@@ -17,13 +17,11 @@
   "lint-staged": {
     "*.{js,vue}": [
       "npm run lint:js",
-      "npm run format",
-      "git add"
+      "npm run format"
     ],
     "*.{css,vue}": [
       "npm run lint style",
-      "npm run format",
-      "git add"
+      "npm run format"
     ]
   },
   "husky": {
