@@ -15,6 +15,7 @@ module.exports = {
               a: {
                 // color: theme('colors.links')
                 color: theme('colors.indigo.600'),
+                textDecoration: 'none',
               },
               'a:hover': {
                 color: theme('colors.indigo.400'),
@@ -31,6 +32,7 @@ module.exports = {
               },
               h1: { color: theme('colors.gray.300') },
               p: { color: theme('colors.gray.300') },
+              code: { color: theme('colors.gray.300') },
             },
           },
         }

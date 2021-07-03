@@ -38,9 +38,9 @@
               lg:mx-0
             "
           >
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            I create front-end staff with React, Vue/Nuxt or Jamstack. I'm
+            working as front-end engineer in
+            <a href="https://mail.ru">Mail.ru</a>.
           </p>
         </div>
       </main>
