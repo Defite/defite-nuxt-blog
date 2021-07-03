@@ -12,7 +12,7 @@
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest",
     "format": "prettier --write \"**/*.{js,vue}\"",
-    "postinstall": "husky install"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,vue}": [
