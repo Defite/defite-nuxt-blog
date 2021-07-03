@@ -26,8 +26,8 @@
                 focus:ring-inset
                 focus:ring-indigo-500
               "
-              @click="showMenu = true"
               aria-expanded="false"
+              @click="showMenu = true"
             >
               <span class="sr-only">Open main menu</span>
               <!-- Heroicon name: outline/menu -->

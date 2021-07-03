@@ -13,7 +13,7 @@
   >
     <header class="mb-20">
       <h1 class="article-title">{{ post.title }}</h1>
-      <PostMeta :date="post.createdAt" :readingTime="post.readingTime" />
+      <PostMeta :date="post.createdAt" :reading-time="post.readingTime" />
     </header>
     <nuxt-content :document="post" />
   </article>
@@ -25,6 +25,9 @@ import CopyCode from '~/components/CopyCode.vue'
 import PostMeta from '~/components/PostMeta.vue'
 
 export default Vue.extend({
+  components: {
+    PostMeta,
+  },
   async asyncData({ $content, params }) {
     const post = await $content('blog', params.slug).fetch()
 
@@ -42,9 +45,6 @@ export default Vue.extend({
         block.appendChild(component.$el)
       }
     }, 100)
-  },
-  components: {
-    PostMeta,
   },
 })
 </script>

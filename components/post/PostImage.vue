@@ -1,7 +1,7 @@
 <template>
   <figure :class="{ 'full-image': mode === 'full' }">
     <nuxt-picture :src="src" />
-    <figcaption class="figcaption" v-if="caption">{{ caption }}</figcaption>
+    <figcaption v-if="caption" class="figcaption">{{ caption }}</figcaption>
   </figure>
 </template>
 
