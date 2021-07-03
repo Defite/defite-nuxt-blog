@@ -11,12 +11,20 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "yarn lint:js && yarn lint:style",
     "test": "jest",
-    "format": "prettier --write \"**/*.{js,jsx,json,vue}\"",
+    "format": "prettier --write \"**/*.{js,vue}\"",
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,vue}": [
+      "npm run lint:js",
+      "npm run format",
+      "git add"
+    ],
+    "*.{css,vue}": [
+      "npm run lint style",
+      "npm run format",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
