@@ -5,7 +5,6 @@
       prose
       sm:prose-sm
       lg:prose-lg
-      xl:prose-xl
       dark:prose-dark
       text-left
       my-20
@@ -13,7 +12,7 @@
   >
     <header class="mb-20">
       <h1 class="article-title">{{ post.title }}</h1>
-      <PostMeta :date="post.createdAt" :reading-time="post.readingTime" />
+      <PostMeta :date="post.date" :reading-time="post.readingTime" />
     </header>
     <nuxt-content :document="post" />
   </article>

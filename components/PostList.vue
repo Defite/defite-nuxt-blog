@@ -4,7 +4,7 @@
   >
     <div v-for="post in posts" :key="post.slug" class="mb-10 post-card">
       <div class="text-base text-gray-500 dark:text-gray-400 mb-2">
-        {{ formatDate(post.createdAt) }}
+        {{ formatDate(post.date) }}
       </div>
       <h2 class="font-bold text-2xl mb-3">
         <NuxtLink

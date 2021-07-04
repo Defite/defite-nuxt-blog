@@ -95,6 +95,7 @@
               shadow-lg
               ring-1 ring-black ring-opacity-5
               bg-white
+              dark:bg-gray-800
             "
           >
             <div class="pt-5 pb-6 px-5">

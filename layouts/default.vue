@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-main">
+  <div class="default grid grid-cols-main">
     <Header />
     <Nuxt />
     <Footer />
@@ -45,5 +45,9 @@ html {
 
 .nuxt-content-highlight {
   position: relative;
+}
+
+.default {
+  min-height: 100vh;
 }
 </style>
