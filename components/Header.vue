@@ -88,7 +88,7 @@
           >
         </span>
       </div>
-      <ColorMode class="hidden md:inline-block" />
+      <ColorMode class="hidden md:inline-block md:ml-auto" />
       <!-- Mobile menu -->
       <transition
         enter-active-class="duration-200 ease-out"
