@@ -20,7 +20,7 @@ module.exports = {
               'a:hover': {
                 color: theme('colors.indigo.400'),
               },
-              width: '65ch',
+              width: '100%',
             },
           },
           dark: {

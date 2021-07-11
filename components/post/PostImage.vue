@@ -46,6 +46,9 @@ export default Vue.extend({
 
 .picture > picture img {
   margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .figcaption {
