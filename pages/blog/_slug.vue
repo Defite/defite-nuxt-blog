@@ -19,7 +19,7 @@
   </article>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import CopyCode from '~/components/CopyCode.vue'
 import PostMeta from '~/components/PostMeta.vue'
@@ -32,6 +32,19 @@ export default Vue.extend({
     const post = await $content('blog', params.slug).fetch()
 
     return { post }
+  },
+  head() {
+    return {
+      title: this.post.title,
+      titleTemplate: '%s - Nikita Makhov',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.description,
+        },
+      ],
+    }
   },
   mounted() {
     setTimeout(() => {

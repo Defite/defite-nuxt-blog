@@ -19,6 +19,17 @@ export default Vue.extend({
       blog,
     }
   },
+  head: {
+    title: 'Nikita Makhov',
+    titleTemplate: 'Blog – %s',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Blog about web staff, games, music and life around',
+      },
+    ],
+  },
 })
 </script>
 

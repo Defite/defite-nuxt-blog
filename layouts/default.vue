@@ -16,6 +16,14 @@ export default Vue.extend({
     Footer,
   },
   head: {
+    title: 'Nikita Makhov',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Nikita Makhov, front-end engineer from Russia, Moscow',
+      },
+    ],
     bodyAttrs: {
       class: 'bg-gray-50 dark:bg-gray-800',
     },
