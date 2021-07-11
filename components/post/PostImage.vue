@@ -1,6 +1,11 @@
 <template>
   <figure :class="{ 'full-image': mode === 'full' }">
-    <nuxt-picture :src="src" />
+    <div class="picture">
+      <nuxt-picture
+        :src="src"
+        sizes="xl:100vw lg:100vw md:100vw sm:100vw xs:100vw"
+      />
+    </div>
     <figcaption v-if="caption" class="figcaption">{{ caption }}</figcaption>
   </figure>
 </template>
@@ -12,12 +17,35 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
+<style>
 .full-image {
   position: relative;
   left: 50%;
   width: 100vw;
   margin-left: -50vw;
+}
+
+.picture {
+  position: relative;
+}
+
+.picture::before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.picture > picture {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.picture > picture img {
+  margin: 0;
 }
 
 .figcaption {
