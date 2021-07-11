@@ -7,7 +7,8 @@
       lg:prose-lg
       dark:prose-dark
       text-left
-      my-20
+      my-5
+      md:my-20
     "
   >
     <header class="mb-20">
