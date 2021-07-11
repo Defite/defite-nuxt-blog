@@ -31,9 +31,9 @@ module.exports = {
               'a:hover': {
                 color: theme('colors.indigo.300'),
               },
-              h1: { color: theme('colors.gray.300') },
-              p: { color: theme('colors.gray.300') },
-              code: { color: theme('colors.gray.300') },
+              'h1,h2,h3,h4,h5,h6,p,code,strong': {
+                color: theme('colors.gray.300'),
+              },
             },
           },
         }

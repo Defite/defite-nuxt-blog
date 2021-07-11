@@ -2,7 +2,17 @@
   <!-- Foooter -->
   <footer class="footer border-t border-gray-200 dark:border-gray-600">
     <div
-      class="max-w-screen-xl py-12 mx-auto overflow-hidden flex justify-between"
+      class="
+        max-w-screen-xl
+        py-6
+        md:py-12
+        mx-auto
+        overflow-hidden
+        flex flex-col-reverse
+        md:flex-row
+        justify-between
+        space-y-reverse space-y-3
+      "
     >
       <!-- <nav class="flex flex-wrap justify-center -mx-5 -my-2">
         <div class="px-5 py-2">
@@ -54,10 +64,10 @@
           </a>
         </div>
       </nav> -->
-      <div class="text-base leading-6 text-center text-gray-400">
+      <div class="text-sm md:text-base leading-6 text-center text-gray-400">
         © 2021 Defite. Some rights reserved.
       </div>
-      <div class="flex justify-center space-x-6">
+      <div class="flex justify-center space-x-8">
         <a
           href="https://www.facebook.com/nikita.makhov/"
           class="text-gray-400 hover:text-gray-500"

@@ -3,35 +3,40 @@
     <nav class="flex items-center w-full">
       <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
         <div class="flex items-center justify-between w-full md:w-auto">
-          <NuxtLink to="/">
+          <NuxtLink class="order-2 md:order-1" to="/">
             <img
-              class="h-8 w-auto sm:h-10"
+              class="h-8 w-auto sm:h-10 z-50 relative"
               src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
             />
           </NuxtLink>
-          <div class="-mr-2 flex items-center md:hidden">
+          <ColorMode class="order-1 md:hidden z-50" />
+          <div class="-mr-2 order-3 md:order-2 flex items-center md:hidden">
             <button
               type="button"
               class="
                 bg-white
+                dark:bg-gray-700
                 rounded-md
                 p-2
                 inline-flex
                 items-center
                 justify-center
                 text-gray-400
+                dark:text-gray-300
                 hover:text-gray-500 hover:bg-gray-100
                 focus:outline-none
                 focus:ring-2
                 focus:ring-inset
                 focus:ring-indigo-500
+                z-50
               "
               aria-expanded="false"
-              @click="showMenu = true"
+              @click="showMenu = !showMenu"
             >
-              <span class="sr-only">Open main menu</span>
+              <!-- <span class="sr-only">Open main menu</span> -->
               <!-- Heroicon name: outline/menu -->
               <svg
+                v-if="!showMenu"
                 class="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -44,6 +49,23 @@
                   stroke-linejoin="round"
                   stroke-width="2"
                   d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+
+              <svg
+                v-else
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </button>
@@ -66,6 +88,7 @@
           >
         </span>
       </div>
+      <ColorMode class="hidden md:inline-block" />
       <!-- Mobile menu -->
       <transition
         enter-active-class="duration-200 ease-out"
@@ -81,103 +104,70 @@
             absolute
             top-0
             inset-x-0
-            p-2
             transition
             transform
-            origin-top-right
+            origin-center
             md:hidden
             z-10
           "
         >
-          <div
-            class="
-              rounded-lg
-              shadow-lg
-              ring-1 ring-black ring-opacity-5
-              bg-white
-              dark:bg-gray-800
-            "
-          >
-            <div class="pt-5 pb-6 px-5">
-              <div class="flex items-center justify-between">
-                <div>
-                  <NuxtLink to="/" @click.native="showMenu = false">
-                    <img
-                      class="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt="Workflow"
-                    />
-                  </NuxtLink>
-                </div>
-                <div class="-mr-2">
-                  <button
-                    type="button"
-                    class="
-                      bg-white
-                      rounded-md
-                      p-2
-                      inline-flex
-                      items-center
-                      justify-center
-                      text-gray-400
-                      hover:text-gray-500 hover:bg-gray-100
-                      focus:outline-none
-                      focus:ring-2
-                      focus:ring-inset
-                      focus:ring-indigo-500
-                    "
-                    @click="showMenu = false"
-                  >
-                    <span class="sr-only">Close menu</span>
-                    <!-- Heroicon name: outline/x -->
-                    <svg
-                      class="h-6 w-6"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
+          <div class="bg-white dark:bg-gray-800 grid grid-cols-main h-screen">
+            <div class="menu">
+              <div
+                class="
+                  space-y-10
+                  h-screen
+                  flex flex-col
+                  items-center
+                  justify-center
+                "
+              >
+                <NuxtLink
+                  to="/blog"
+                  class="
+                    text-4xl
+                    font-bold
+                    text-gray-900
+                    hover:text-gray-700
+                    dark:text-gray-300
+                  "
+                  @click.native="showMenu = false"
+                >
+                  Blog
+                </NuxtLink>
+
+                <NuxtLink
+                  to="/work"
+                  class="
+                    text-4xl
+                    font-bold
+                    text-gray-900
+                    hover:text-gray-700
+                    dark:text-gray-300
+                  "
+                  @click.native="showMenu = false"
+                >
+                  Work
+                </NuxtLink>
+
+                <NuxtLink
+                  to="/about"
+                  class="
+                    text-4xl
+                    font-bold
+                    text-gray-900
+                    hover:text-gray-700
+                    dark:text-gray-300
+                  "
+                  @click.native="showMenu = false"
+                >
+                  About
+                </NuxtLink>
               </div>
-            </div>
-            <div class="py-6 px-5 space-y-6 flex flex-col">
-              <NuxtLink
-                to="/blog"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-                @click.native="showMenu = false"
-              >
-                Blog
-              </NuxtLink>
-
-              <NuxtLink
-                to="/work"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-                @click.native="showMenu = false"
-              >
-                Work
-              </NuxtLink>
-
-              <NuxtLink
-                to="/about"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-                @click.native="showMenu = false"
-              >
-                About
-              </NuxtLink>
             </div>
           </div>
         </div>
       </transition>
-      <ColorMode />
     </nav>
   </header>
 </template>
@@ -225,5 +215,9 @@ export default Vue.extend({
 .dark a.nuxt-link-exact-active {
   color: white;
   font-weight: bold;
+}
+
+.menu {
+  grid-column: wide-start/wide-end;
 }
 </style>
