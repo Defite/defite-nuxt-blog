@@ -38,12 +38,6 @@ export default {
     '@nuxt/image',
   ],
 
-  image: {
-    cloudinary: {
-      baseURL: 'https://res.cloudinary.com/defite/image/upload/',
-    },
-  },
-
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa

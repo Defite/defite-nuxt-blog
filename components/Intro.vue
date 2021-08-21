@@ -11,8 +11,19 @@
         xl:pb-32
       "
     >
-      <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
-        <div class="sm:text-center lg:text-left">
+      <main
+        class="
+          mt-10
+          mx-auto
+          max-w-7xl
+          sm:mt-12
+          md:mt-16
+          lg:mt-20
+          xl:mt-28
+          space-y-32
+        "
+      >
+        <section class="sm:text-center lg:text-left">
           <h1
             class="
               text-4xl
@@ -42,11 +53,23 @@
             working as front-end engineer in
             <a href="https://mail.ru">Mail.ru</a>.
           </p>
-        </div>
+        </section>
+        <WorksList :items="projects" />
       </main>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+import WorksList from '~/components/WorksList.vue'
+export default Vue.extend({
+  components: {
+    WorksList,
+  },
+  props: ['projects'],
+})
+</script>
 
 <style scoped>
 .intro {

@@ -1,23 +1,34 @@
 <template>
-  <Intro :projects="projects" />
+  <PostList :posts="blog" />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Intro from '~/components/Intro.vue'
+import PostList from '~/components/PostList.vue'
 
 export default Vue.extend({
   components: {
-    Intro,
+    PostList,
   },
   async asyncData({ $content, params }) {
-    const projects = await $content('projects', params.slug)
+    const blog = await $content('blog', params.slug)
       .sortBy('date', 'desc')
       .fetch()
 
     return {
-      projects,
+      blog,
     }
+  },
+  head: {
+    title: 'Nikita Makhov',
+    titleTemplate: 'Blog – %s',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Blog about web staff, games, music and life around',
+      },
+    ],
   },
 })
 </script>
