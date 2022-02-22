@@ -31,7 +31,7 @@
     }
   },
   "dependencies": {
-    "@headlessui/vue": "^1.4.1",
+    "@headlessui/vue": "^1.5.0",
     "@heroicons/vue": "^1.0.3",
     "@nuxt/content": "^1.15.1",
     "@nuxt/image": "^0.6.0",
@@ -39,8 +39,8 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.2.0",
     "@tailwindcss/typography": "^0.4.1",
-    "clipboard": "^2.0.8",
-    "core-js": "^3.19.1",
+    "clipboard": "^2.0.10",
+    "core-js": "^3.21.1",
     "nuxt": "^2.15.8",
     "prism-themes": "^1.9.0",
     "reading-time": "^1.5.0"
