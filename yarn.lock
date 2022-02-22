@@ -1116,10 +1116,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@headlessui/vue@^1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.4.1.tgz#bc1a37d3180eeeae28ad467f020c2dfdc8d43645"
-  integrity sha512-yLgpqxJGdGw+ylouZfxxuXXBqCWRZq+Jh1jb23cXQIuAngbisN5BlSO8pPpvKOvk6hXr8dx9bPohSn45cbIIHw==
+"@headlessui/vue@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.5.0.tgz#8cd4877d3d344e482073a04ae8e3b7f987bb267c"
+  integrity sha512-jAp6XYpqdEv32xhszaj5ejvjaX5qhu20sCbxu7lplePEfZL+4ffabivJBBTZAiPWczqAXmnZWNWG5DOyqjRa4w==
 
 "@heroicons/vue@^1.0.3":
   version "1.0.4"
@@ -4454,10 +4454,10 @@ core-js@^2.4.0, core-js@^2.6.5:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
-core-js@^3.19.1:
-  version "3.19.1"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.1.tgz#f6f173cae23e73a7d88fa23b6e9da329276c6641"
-  integrity sha512-Tnc7E9iKd/b/ff7GFbhwPVzJzPztGrChB8X8GLqoYGdEOG8IpLnK1xPyo3ZoO3HsK6TodJS58VGPOxA+hLHQMg==
+core-js@^3.21.1:
+  version "3.21.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
+  integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
 
 core-util-is@~1.0.0:
   version "1.0.2"
@@ -5449,10 +5449,10 @@ escodegen@^2.0.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^8.1.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
-  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
+eslint-config-prettier@^8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.4.0.tgz#8e6d17c7436649e98c4c2189868562921ef563de"
+  integrity sha512-CFotdUcMY18nGRo5KGsnNxpznzhkopOcOo0InID+sgQssPrzjvsyKZPvOgymTFeHrFuC3Tzdf2YndhXtULK9Iw==
 
 eslint-config-standard@^16.0.3:
   version "16.0.3"
